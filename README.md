@@ -2,7 +2,7 @@
 
 This project is a Resource Scheduler designed to optimize the allocation of bank tellers or call center agents to customer requests. The scheduler minimizes wait times, maximizes resource utilization, and ensures fairness in task distribution.
 
-## 📌 Features
+## Features
 
 - Simulates customer arrivals with randomized service times and priority levels (VIP, Corporate, Normal).
 - Dynamically assigns employees (bank tellers or agents) based on availability and workload.
@@ -18,7 +18,7 @@ This project is a Resource Scheduler designed to optimize the allocation of bank
   - Fully containerized using Docker.
   - Automated CI/CD deployment using GitHub Actions.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Python (Flask) -> Web API
 - Docker (Containerization)
@@ -37,7 +37,7 @@ Resource-Scheduler/
 ️│── requirements.txt      # Required Python dependencies
 ️│── README.md             # Project documentation
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### Step 1: Clone Repository
 ```zsh
