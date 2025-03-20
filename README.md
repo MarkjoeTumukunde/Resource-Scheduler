@@ -37,7 +37,85 @@ Resource-Scheduler/
 ️│── requirements.txt      # Required Python dependencies
 ️│── README.md             # Project documentation
 
-## Setup Instructions
+### How the project starts.
+- The main script simulation.py initializes and runs the project by:
+  - Importing required modules (random, time, threading)
+  - Creating a scheduler instance (ResourceScheduler)
+  - Generating random customers with different priorities
+  - Assigning tasks based on priority
+  - Running a background thread to process scheduled tasks
+
+### Running the Project
+To start the project, follow these steps:
+- Ensure dependencies are installed:
+- Run the simulation script:
+This will start the scheduler, generate customers, and assign them tasks based on priority.
+
+### Breakdown of simulation.py
+#### Imports
+- random & time: Simulate real-world randomness.
+- scheduler & models: Import project-specific classes.
+- threading: Allows background task processing.
+
+#### Customer Simulation
+- Generates 10 customers with random priority and service time.
+- Assigns tasks to the scheduler based on priority scheduling.
+- Introduces random wait times between customer arrivals.
+
+#### Customer Simulation
+- Generates 10 customers with random priority and service time.
+- Assigns tasks to the scheduler based on priority scheduling.
+- Introduces random wait times between customer arrivals.Initializing the Scheduler
+  - Creates a ResourceScheduler with 3 worker agents.
+  - Runs the scheduler processing in a separate thread.
+  - Starts simulating customer requests.
+  - Keeps the script running until manually stopped (Ctrl+C).
+
+#### Initializing the Scheduler
+- Creates a ResourceScheduler with 3 worker agents.
+- Runs the scheduler processing in a separate thread.
+- Starts simulating customer requests.
+- Keeps the script running until manually stopped (Ctrl + C)
+
+#### Breakdown of ResourceScheduler
+The ResourceScheduler class is responsible for managing task assignments and scheduling.
+#### Key Responsibilities:
+- Implements three scheduling methods:
+  - Priority Scheduling – Higher priority customers get served first.
+  - Round Robin Scheduling – Customers are served in a rotating order.
+  - Shortest Job Next – Customers with the shortest service time are served first.
+- Manages a set number of agents (workers).
+- Uses multi-threading to handle concurrent tasks.
+- Tracks waiting times and agent utilization.
+
+#### Class Breakdown
+1. Initialization (__init__)
+- Creates worker agents.
+- Initializes three different queues for task scheduling.
+- Uses a thread lock to prevent race conditions.
+
+2. Assigning Tasks (assign_task)
+- Assigns customers to different queues based on scheduling method.
+- Sorts Shortest Job Next tasks by service time.
+
+3. Processing Tasks (process_tasks)
+- Finds available agents.
+- Picks the next customer task based on the selected scheduling method.
+- Assigns an agent and starts processing in a new thread.
+
+4. Completing Tasks (complete_task)
+- Simulates task execution.
+- Releases the agent after completion.
+
+5. Monitoring Agents (monitor_agents****)
+- Prints agent status updates every 5 seconds.
+- Tracks average wait time and agent utilization.
+
+6. Customer Class
+- Defines customer properties and priority comparison.
+
+7. Agent Class
+- Represents an agent that can handle tasks.
 
 ### Step 1: Clone Repository
 ```zsh

@@ -1,19 +1,19 @@
 FROM python:3.9
 
-# Set working directory clearly
+# Sets working directory
 WORKDIR /app
 
-# Copy requirements explicitly first for efficiency
+# Copies requirements explicitly first for efficiency
 COPY requirements.txt /app/requirements.txt
 
-# Install dependencies clearly
+# Installs dependencies 
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy entire project files
+# Copies entire project files
 COPY . /app
 
-# Expose Flask port clearly
+# Exposes Flask port
 EXPOSE 5000
 
-# Run your Flask application (main.py) clearly
+# Runs Flask application (main.py)
 CMD ["python", "app/main.py"]

@@ -1,22 +1,24 @@
 print("Starting Flask server...")  # Debugging print
 import sys
 import os
-
-# Fix path issues
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
-# Corrected imports
 from flask import Flask, request, jsonify
 from scheduler import ResourceScheduler
 from models import Customer
+
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 print("Flask module imported successfully.")  # Debugging print
 
 app = Flask(__name__)
 
-# Initialize scheduler with 3 agents
+# Initializing scheduler with 3 agents
 scheduler = ResourceScheduler(num_agents=3)
 print("Scheduler initialized.")  # Debugging print
+
+# Default homepage route to prevent 404 errors
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the Resource-Scheduler API! Available endpoints: /add_customer (POST), /start_scheduler (GET)"}), 200
 
 @app.route('/add_customer', methods=['POST'])
 def add_customer():
@@ -34,6 +36,5 @@ def start_scheduler():
     return jsonify({"message": "Scheduler started"}), 200
 
 if __name__ == '__main__':
-    print("Flask is running on http://0.0.0.0:5000")  # Clearly indicate this change
-    app.run(debug=True, host='0.0.0.0', port=5000)
-
+    print("Flask is running on http://0.0.0.0:5002")
+    app.run(debug=True, host='0.0.0.0', port=5002)
