@@ -9,7 +9,7 @@
 #### Mugendi Amujjadi
 Sep23/bist/3749u
 
-#### Resource Scheduler
+# Resource Scheduler
 This project is a Resource Scheduler designed to optimize the allocation of bank tellers or call center agents to customer requests. The scheduler minimizes wait times, maximizes resource utilization and ensures fairness in task distribution.
 
 ## Features
