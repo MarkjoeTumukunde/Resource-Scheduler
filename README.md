@@ -1,9 +1,7 @@
 # Resource Scheduler
-
 This project is a Resource Scheduler designed to optimize the allocation of bank tellers or call center agents to customer requests. The scheduler minimizes wait times, maximizes resource utilization, and ensures fairness in task distribution.
 
 ## Features
-
 - Simulates customer arrivals with randomized service times and priority levels (VIP, Corporate, Normal).
 - Dynamically assigns employees (bank tellers or agents) based on availability and workload.
 - Implements scheduling algorithms:
@@ -19,11 +17,9 @@ This project is a Resource Scheduler designed to optimize the allocation of bank
   - Automated CI/CD deployment using GitHub Actions.
 
 ## Tech Stack
-
 - Python (Flask) -> Web API
 - Docker (Containerization)
 - GitHub Actions -> CI/CD Automation
-
 
 ## Project Structure
 Resource-Scheduler/
@@ -52,17 +48,17 @@ To start the project, follow these steps:
 This will start the scheduler, generate customers, and assign them tasks based on priority.
 
 ### Breakdown of simulation.py
-#### Imports
+1. #### Imports
 - random & time: Simulate real-world randomness.
 - scheduler & models: Import project-specific classes.
 - threading: Allows background task processing.
 
-#### Customer Simulation
+2. #### Customer Simulation
 - Generates 10 customers with random priority and service time.
 - Assigns tasks to the scheduler based on priority scheduling.
 - Introduces random wait times between customer arrivals.
 
-#### Customer Simulation
+3. #### Customer Simulation
 - Generates 10 customers with random priority and service time.
 - Assigns tasks to the scheduler based on priority scheduling.
 - Introduces random wait times between customer arrivals.Initializing the Scheduler
@@ -71,7 +67,7 @@ This will start the scheduler, generate customers, and assign them tasks based o
   - Starts simulating customer requests.
   - Keeps the script running until manually stopped (Ctrl+C).
 
-#### Initializing the Scheduler
+4. #### Initializing the Scheduler
 - Creates a ResourceScheduler with 3 worker agents.
 - Runs the scheduler processing in a separate thread.
 - Starts simulating customer requests.
