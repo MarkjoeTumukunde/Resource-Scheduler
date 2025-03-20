@@ -1,15 +1,15 @@
 # OPERATING SYSTEMS | TASK 2
 
-## Tumukunde Markjoe
-### sep22/bsc/1647u
+#### Tumukunde Markjoe
+ sep22/bsc/1647u
 
-## Wandira Kevin 
-### may22/bist/1566u
+#### Wandira Kevin 
+ may22/bist/1566u
 
-## Mugendi Amujjadi
-### Sep23/bist/3749u
+#### Mugendi Amujjadi
+Sep23/bist/3749u
 
-# Resource Scheduler
+#### Resource Scheduler
 This project is a Resource Scheduler designed to optimize the allocation of bank tellers or call center agents to customer requests. The scheduler minimizes wait times, maximizes resource utilization and ensures fairness in task distribution.
 
 ## Features
